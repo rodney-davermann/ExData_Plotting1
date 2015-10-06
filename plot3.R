@@ -1,7 +1,7 @@
 
 
 # After download the data Read it from the directory
-EDAP1<-read.table("C://R_Training//household_power_consumption.txt", sep = ";", dec = ".", header = T, stringsAsFactors = FALSE)
+EDAP1<-read.table("C://R_Training//household_power_consumption.txt", sep = ";", dec = ".", header = T, as.is = T)
 #Subset EDAP1 from target Date ie ("1/2/2007" and "2/2/2007")
 subset_EDAP1<-EDAP1[EDAP1$Date %in% c("1/2/2007", "2/2/2007"),]
 # Date and Time in new format (strptime function)
